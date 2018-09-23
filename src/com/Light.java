@@ -1,19 +1,12 @@
 package com;
 
-import java.util.Scanner;
 
-/**
- * Назначение класса
- *
- * @author Администратор
- * @since 17.09.2018
- */
 public class Light {
     private Colour colour;
     private int time;
+    private final int MINUTE = 6000;
 
     public Light() {
-
     }
 
     public Colour getColour() {
@@ -21,7 +14,7 @@ public class Light {
     }
 
     public void setColour(Colour colour) {
-        if (this.colour == null){
+        if (this.colour == null) {
             this.colour = colour;
         }
     }
@@ -31,6 +24,6 @@ public class Light {
     }
 
     public void setTime(int time) {
-        this.time = time * 60000;
+        this.time = time * MINUTE;
     }
 }
